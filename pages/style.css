@@ -1,0 +1,95 @@
+body{
+  font-family:sans-serif;
+  background-color: antiquewhite;
+}
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.logo-box{
+  background: linear-gradient(90deg,#293b90,#98189a)!important;
+  color: white;
+  text-align: center;
+  padding: 15px 0px 15px 0px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.logo{
+ text-align: center;
+ margin: 20px 0px;
+
+}
+.logo>img{
+  width: 30%;
+  max-width: 100%;
+}
+.input-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.input-box>p{
+  width: 80%;
+}
+.input-box>p>input{
+  width: 95%;
+  background: transparent;
+  padding: 10px;
+  margin: -7px 0px;
+  border-radius: 4px;
+  color: #98189a;
+  border: 1px solid #98189a;
+  outline: none;
+  font-size: 12px;
+  
+
+}
+.input-box>p>input::placeholder{
+  color: #98189a;
+}
+
+.btn{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.btn>button{
+  background: linear-gradient(90deg,#293b90,#98189a)!important;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 70px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+  .main{
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main{
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main{
+    width: 100%;
+  }
+}

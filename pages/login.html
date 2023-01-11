@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="./../js/firebase.js"></script>
+
+    <style>
+        div{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 50px;
+        }
+        input{
+          width: 30%;
+          height: 30px;
+          padding: 3px;
+          outline: none;
+          border-radius: 5px;
+          font-size: 18px;
+        }
+        input::placeholder{
+          font-size: 18px;
+          color: blueviolet;
+        }
+        button{
+          outline: none;
+          border: none;
+          background-color: blueviolet;
+          color: aliceblue;
+          padding: 8px 25px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        a{
+          text-decoration: none;
+          color: cadetblue;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        p{
+          font-size: 24px;
+          background-color: aqua;
+          width: 300px;
+          
+        }
+      </style>
+</head>
+
+<body>
+    <div>
+        <input type="email" name="email" placeholder="Email" id="email"><br><br>
+        <input type="password" name="password" placeholder="Password" id="password"><br><br>
+        <p id="message"></p>
+        <button onclick="Login()">Login</button>
+        <a href="signup.html">Sign Up</a>
+        <a href="./forgot-password.html">Frgot Password</a>
+        <button onclick="google()">Login with Google</button>
+        <button onclick="facebook()">Login with Facebook</button>
+
+    </div>
+</body>
+<script src="./../js/login.js"></script>
+
+</html>
