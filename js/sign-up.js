@@ -1,4 +1,4 @@
-let userName = document.getElementById("name");
+let userName = document.getElementById("userName");
 let fatherName = document.getElementById("fname");
 let cnic = document.getElementById("cnic");
 let mobileNumber = document.getElementById("mobile-no");
@@ -6,13 +6,29 @@ let email = document.getElementById("email");
 let password = document.getElementById("password");
 let message = document.getElementById("message");
 const SignUp = () => {
-  if (email.value === "") {
+  if(userName.value === ""){
+    message.innerHTML = "User Name required!";
+    message.style.color = "red";
+    userName.focus();
+    setTimeout(function(){
+        message.innerHTML = "";
+    }, 3000)
+  }else if(fatherName.value === ""){
+    message.innerHTML = "Father Name required!";
+    message.style.color = "red";
+    fatherName.focus();
+      setTimeout(function(){
+          message.innerHTML = "";
+      }, 3000)
+    }
+ else if (email.value === "") {
     message.innerHTML = "Email required!";
     message.style.color = "red";
     email.focus();
     setTimeout(function(){
         message.innerHTML = "";
     }, 3000)
+
   } else if (password.value === "") {
     message.innerHTML = "Password required!";
     message.style.color = "red";
@@ -20,22 +36,8 @@ const SignUp = () => {
     setTimeout(function(){
         message.innerHTML = "";
     }, 3000)
-  }else if(userName.value.length = ""){
-      message.innerHTML = "User Name required!";
-      message.style.color = "red";
-      userName.focus();
-      setTimeout(function(){
-          message.innerHTML = "";
-      }, 3000)
-    }else if(fatherName.value = ""){
-      message.innerHTML = "Father Name required!";
-      message.style.color = "red";
-      fatherName.focus();
-        setTimeout(function(){
-            message.innerHTML = "";
-        }, 3000)
-      }
-  else if(cnic.value.length = ""){
+  }
+  else if(cnic.value.length === ""){
     message.innerHTML = "!cnic required";
         message.style.color = "red";
         cnic.focus();

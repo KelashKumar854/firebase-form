@@ -6,6 +6,9 @@ const forgot = ()=>{
     .then(()=>{
         message.innerHTML = "!Email sent";
         message.style.color = "green";
+        setTimeout(()=>{
+            window.location.assign("./login.html")
+        },4000)
     })
     .catch((error)=>{
         message.innerHTML = error.message;
