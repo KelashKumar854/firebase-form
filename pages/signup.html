@@ -2,118 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-    <script src="./../js/firebase.js"></script>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  <script src="./../js/firebase.js"></script>
+  <link rel="stylesheet" href="./../css/signup.css">
 
-   <style>
-         /* div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin-top: 50px;
-        } 
-    
-        input {
-          width: 30%;
-          height: 30px;
-          padding: 3px;
-          outline: none;
-          border-radius: 5px;
-          font-size: 18px;
-        } */
-/*     
-        input::placeholder {
-          font-size: 18px;
-          color: blueviolet;
-        }
-    
-        button {
-          outline: none;
-          border: none;
-          background-color: blueviolet;
-          color: aliceblue;
-          padding: 8px 25px;
-          border-radius: 5px;
-          margin-bottom: 10px;
-          font-size: 18px;
-          font-weight: bold;
-        } */
-     
-        a {
-          text-decoration: none;
-          color: cadetblue;
-          font-size: 24px;
-          font-weight: bold;
-        }
-    
-       /* p {
-          font-size: 24px;
-          background-color: aqua;
-          width: 300px;
-    
-        }  */
-      </style> 
+  <style>
+
+    a {
+      text-decoration: none;
+      color: cadetblue;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- <div>
-        <input type="email" name="email" placeholder="Email" id="email"><br><br>
-        <input type="password" name="password" placeholder="Password" id="password"><br><br>
+  <div id="main">
+    <div class="main">
+      <div class="logo-box">
+        <h2>Student Sign Up</h2>
+      </div>
+      <div class="logo">
+        <img src="./colorlogo-01.png" alt="logo">
+      </div>
+
+      <div class="input-box">
+        <p>
+          <input type="text" name="name" id="name" placeholder="Name" required>
+        </p>
+        <p>
+          <input type="text" name="fathername" id="fname" placeholder="Father Name" required>
+        </p>
+        <p>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+        </p>
+        <p>
+          <input type="password" name="password" id="password" placeholder="Password" minlength="6" required>
+        </p>
+        <p>
+          <input type="number" name="cnic number" id="cnic" placeholder="CNIC Number" required>
+        </p>
+        <p>
+          <input type="number" name="mobile number" id="mobile-no" placeholder="Mobile Number" required>
+        </p>
+
         <p id="message"></p>
-        <button onclick="SignUp()">SignUp</button>
-        <a href="login.html">Login</a>
-      </div> -->
-
-      <div id="main">
-        <div class="main">
-            <div class="logo-box">
-                <h2>Student Sign Up</h2>
-            </div>
-            <div class="logo">
-                <img src="./colorlogo-01.png" alt="logo">
-            </div>
-            
-                <div class="input-box">
-                    <p>
-                        <input type="text" name="name" id="name" placeholder="Name" required>
-                    </p>
-                    <p>
-                        <input type="text" name="fathername" id="fname" placeholder="Father Name" required>
-                    </p>
-                    <p>
-                        <input type="email" name="email" id="email" placeholder="Email" required>
-                    </p>
-                    <p>
-                        <input type="password" name="password" id="password" placeholder="Password" minlength="6" required>
-                    </p>
-                    <p>
-                        <input type="number" name="cnic number" id="cnic" placeholder="CNIC Number" required>
-                    </p>
-                    <p>
-                        <input type="number" name="mobile number" id="mobile-no" placeholder="Mobile Number" required>
-                    </p>
-
-                    <p id="message"></p>
-                    <div class="btn">
-                        <button onclick="SignUp()">Sign Up</button><br><br>
-                        <a href="./login.html">Login</a>
-                    </div>
-
-                </div>
-            
+        <div class="btn">
+          <button onclick="SignUp()">Sign Up</button><br><br>
+          <a href="./login.html">Login</a>
         </div>
-        
-    </div>
-  </body>
-  <!-- <script src="./style.js"></script> -->
-<script src="./../js/sign-up.js"></script>
 
+      </div>
+
+    </div>
+
+  </div>
+</body>
+<script src="./../js/sign-up.js"></script>
 </html>

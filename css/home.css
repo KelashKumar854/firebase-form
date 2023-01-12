@@ -1,0 +1,73 @@
+h1{
+    background-color: aqua;
+    padding: 20px;
+}
+#uid{
+    color: blueviolet;
+    font-size: 24px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    color: blueviolet;
+    padding-left: 5px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid darkblue;
+}
+input::placeholder{
+    font-size: 18px;
+    font-weight: bold;
+    color: blueviolet;
+    padding-left: 5px;
+}
+.btn{
+    outline: none;
+        border: none;
+        background-color: blueviolet;
+        color: aliceblue;
+        padding: 8px 25px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+}
+.output-box{
+    display: flex;
+    height: 40px;
+    margin: 8px;
+    
+}
+.output-p{
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: rgb(153, 13, 134);
+}
+.edit-btn{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-right: 3px solid white;
+    cursor: pointer;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+.delete-btn{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-left: 3px solid rgb(0, 0, 0);
+    cursor: pointer;
+    border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}

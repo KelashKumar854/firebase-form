@@ -18,7 +18,8 @@ firebase.auth().onAuthStateChanged((user) => {
 const resendEmail = ()=>{
   const user = firebase.auth().currentUser;
   user.sendEmailVerification().then(()=>{
-    message.innerHTML = "send email";
+    message.innerHTML = "!send email";
+    message.style.color = "green";
   })
 }
 

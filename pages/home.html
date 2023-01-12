@@ -5,47 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="./../js/firebase.js"></script>
-
-    <style>
-        h1{
-          background-color: aqua;
-          padding: 20px;
-        }
-        #uid{
-          color: blueviolet;
-          font-size: 24px;
-        }
-        
-        
-        button{
-          outline: none;
-              border: none;
-              background-color: blueviolet;
-              color: aliceblue;
-              padding: 8px 25px;
-              border-radius: 5px;
-              margin-bottom: 10px;
-              font-size: 18px;
-              font-weight: bold;
-        }
-      </style>
+    <link rel="stylesheet" href="./../css/home.css">
 </head>
 
 <body>
     <h1>Home</h1>
     <p id="uid"></p>
     <p id="message"></p>
-    <button onclick="LogOut()">Log Out</button>
+    <button onclick="LogOut()" class="btn">Log Out</button>
     <br><br>
     <input type="text" id="input" placeholder="type...">
     <br><br>
-    <button onclick="addToDo()">Add</button>
-    <button onclick="editFunction()">Edit</button>
+    <button onclick="addToDo()" class="btn">Add</button>
     <div id="todoMain"></div>
     
 </body>

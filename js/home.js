@@ -54,18 +54,51 @@ firebase.database()
   res.forEach((todoValue) => {
     let div = document.createElement("div");
     todoMain.appendChild(div);
+    div.setAttribute("class","output-box");
     let heading = document.createElement("p");
     div.appendChild(heading);
+    heading.setAttribute("class","output-p");
     heading.innerHTML = todoValue.val().todoValue;
+    let editbtn = document.createElement("button");
+    div.appendChild(editbtn);
+    editbtn.innerHTML = "Edit";
+    editbtn.setAttribute("class","edit-btn");
+    let deletebtn = document.createElement("button");
+    div.appendChild(deletebtn);
+    deletebtn.innerHTML = "Delete"
+    deletebtn.setAttribute("class","delete-btn");
+
+    // edit function
+    editbtn.addEventListener("click",()=>{
+      let pro = prompt("edit", todoValue.val().todoValue);
+      firebase.database().ref("todo/" + todoValue.key).update({
+        todoValue: pro,
+      })
+    })
+
+    // delete function
+    deletebtn.addEventListener("click", ()=>{
+      
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Poof! Your imaginary file has been deleted!", {
+            icon: "success",
+          });
+
+          firebase.database().ref("todo/" + todoValue.key).remove() 
+        }
+        else {
+          swal("Your imaginary file is safe!");
+        }
+      });
+    })
   });
 });
 
-// edit
-const editFunction = ()=>{
-  firebase
-  .database()
-  .ref("todo/" + "-NLTsO1BLq93jNFg0fQZ")
-  .update({
-    todoValue: "kelash"
-  })
-}

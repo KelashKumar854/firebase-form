@@ -44,7 +44,7 @@ const google = ()=>{
   .signInWithPopup(provider)
   .then((res)=>{
 console.log(res);
-message.innerHTML = "login";
+message.innerHTML = "!Successfully Login with Google";
 message.style.color = "green";
 setTimeout(()=>{
   window.location.assign("./home.html");
@@ -64,7 +64,7 @@ const facebook = ()=>{
   .signInWithPopup(provider)
   .then((res)=>{
 console.log(res)
-message.innerHTML = "login";
+message.innerHTML = "!Successfully Login with Facebook";
 message.style.color = "green";
 setTimeout(()=>{
   window.location.assign("./home.html");
